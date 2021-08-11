@@ -4,6 +4,7 @@
 #include "plugins/PositionPlugin.h"
 #include "plugins/RemoteHardwarePlugin.h"
 #include "plugins/ReplyPlugin.h"
+#include "../../test-lib/TestPlugin.h"
 #include "plugins/TextMessagePlugin.h" 
 #include "plugins/SerialPlugin.h"
 #include "plugins/TextMessagePlugin.h"
@@ -25,6 +26,7 @@ void setupPlugins()
     nodeInfoPlugin = new NodeInfoPlugin();
     positionPlugin = new PositionPlugin();
     textMessagePlugin = new TextMessagePlugin();
+    new TestPlugin();
 
     // Note: if the rest of meshtastic doesn't need to explicitly use your plugin, you do not need to assign the instance
     // to a global variable.
